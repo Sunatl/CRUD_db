@@ -1,0 +1,19 @@
+body{
+    background-color: black;
+    color: white;
+}
+
+.a1{
+    text-decoration: none;
+    width: 32%;
+    border-radius: 2%;
+    border: 1px solid;
+    padding: 5px;
+    text-align: center;
+    margin-left: 400px;
+
+}
+.a2{
+ margin-left: 560px;
+ margin-top: 20px;
+}

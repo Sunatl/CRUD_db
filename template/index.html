@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+</head>
+<body>
+
+<div class="a1">
+    <h1>Tasks</h1>
+    <a href="{% url 'add' %}"><h3>Add</h3></a>
+
+</div>
+
+
+    <div class="container">
+        {% for task in tasks %}
+           <a href="http://127.0.0.1:8000/get_by_id/{{task.id}}"> <div class="card">
+                    <h3>Id: {{task.id}}</h3>
+                    <h3>Name: {{task.name}}</h3>
+                    <h4>Due date: {{task.due_date}}</h4>
+                    <p>Status: {{task.status}}</p>
+                    <p>Priority: {{task.priority}}</p>
+                    <h3>Description: {{task.description}}</h3>
+                    <p>User: {{task.user}}</p>
+                    <p>Is active: {{task.is_active}}</p>
+
+            </div></a>
+        {% endfor %}
+    </div>
+</body>
+</html>

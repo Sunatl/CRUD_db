@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+</head>
+<body>
+    <!-- <div class="container">
+            <div class="card">
+                    <h3>Name: {{tasks.name}}</h3>
+                    <h4>Due date: {{tasks.due_date}}</h4>
+                    <p>Status: {{tasks.status}}</p>
+                    <p>Priority: {{tasks.priority}}</p>
+                    <h3>Description: {{tasks.description}}</h3>
+                    <p>User: {{tasks.user}}</p>
+                    <p>Is active: {{tasks.is_active}}</p>
+            </div>
+    </div> -->
+<h2>Are you sure to delete this post: {{tasks.name}}</h2>
+<form method = "post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit">Yes</button>
+</form>
+<a href="http://127.0.0.1:8000">No</a>
+</body>
+</html>

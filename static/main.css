@@ -1,0 +1,34 @@
+.container{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    
+}
+a{
+    text-decoration: none;
+    width: 32%;
+    border-radius: 2%;
+    border: 1px solid;
+    padding: 5px;
+    text-align: center;
+}
+
+
+
+body{
+    background-color: aqua;
+}
+.a1{
+    display: flex;
+    align-items: center;
+    
+}
+.a1 a{
+    margin-left: 100px;
+
+}
+.a1 h1{
+    margin-left: 300px;
+}

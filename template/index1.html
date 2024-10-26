@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+</head>
+<body>
+    <div class="container">
+            <div class="card">
+                    <h3>Name: {{tasks.name}}</h3>
+                    <h4>Due date: {{tasks.due_date}}</h4>
+                    <p>Status: {{tasks.status}}</p>
+                    <p>Priority: {{tasks.priority}}</p>
+                    <h3>Description: {{tasks.description}}</h3>
+                    <p>User: {{tasks.user}}</p>
+                    <p>Is active: {{tasks.is_active}}</p>
+            </div></div>
+            <a style="width: 50 px; height: 30px;margin-top: 50px" href="{% url 'get_all' %}">Menu</a>
+            <a href="http://127.0.0.1:8000/delete/{{tasks.id}}">Delete</a>
+            <a href="http://127.0.0.1:8000/update/{{tasks.id}}">Update</a>
+    
+</body>
+</html>
